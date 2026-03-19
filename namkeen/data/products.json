@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sev",
+    "name": { "en": "Sev", "hi": "सेव", "gu": "સેવ" },
+    "price": 120,
+    "unit": "250g",
+    "image": "https://images.unsplash.com/photo-1616947696400-443894fa5b07?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "puri",
+    "name": { "en": "Puri", "hi": "पुरी", "gu": "પુરિ" },
+    "price": 100,
+    "unit": "200g",
+    "image": "https://images.unsplash.com/photo-1615421252074-d1a1bb070192?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "bhujia",
+    "name": { "en": "Bhujia", "hi": "भुजिया", "gu": "ભુજીયા" },
+    "price": 130,
+    "unit": "250g",
+    "image": "https://images.unsplash.com/photo-1627939997520-7f397e35c525?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "mixture",
+    "name": { "en": "Mixture", "hi": "मिक्सचर", "gu": "મિશ્રણ" },
+    "price": 140,
+    "unit": "250g",
+    "image": "https://images.unsplash.com/photo-1563245375-76e66b5daa73?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "kachori",
+    "name": { "en": "Kachori", "hi": "कचोरी", "gu": "કચૌરી" },
+    "price": 90,
+    "unit": "180g",
+    "image": "https://images.unsplash.com/photo-1591669270145-61b52ec0f1e2?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "farsan",
+    "name": { "en": "Farsan", "hi": "फरशन", "gu": "ફરસાણ" },
+    "price": 110,
+    "unit": "220g",
+    "image": "https://images.unsplash.com/photo-1590432667813-8b971c1c59c7?auto=format&fit=crop&w=800&q=80"
+  }
+]

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin · [Your Brand Name]</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" style="position: relative;">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="https://images.unsplash.com/photo-1611275252364-957a43a76f6d?auto=format&fit=crop&w=120&q=60" alt="Brand Logo" />
+        <div class="brand">
+          <h1>[Your Brand Name]</h1>
+          <p>Admin Panel</p>
+        </div>
+      </a>
+      <a class="btn btn--secondary" href="index.html" style="margin-left:auto;">Back to store</a>
+    </div>
+  </header>
+
+  <main class="section" style="padding: 3rem 0;">
+    <div class="container">
+      <div class="section__header">
+        <h3>Product Management</h3>
+        <p>Update prices, names, images or add new snacks. Changes apply immediately to the store.</p>
+      </div>
+
+      <div class="admin-panel">
+        <section class="admin-panel__section">
+          <h4>Existing products</h4>
+          <div class="admin-table" id="productTable"></div>
+        </section>
+
+        <section class="admin-panel__section">
+          <h4>Add a new product</h4>
+          <form id="productForm" class="admin-form">
+            <div class="form__group">
+              <label for="newNameEn">Name (English)</label>
+              <input id="newNameEn" name="newNameEn" required />
+            </div>
+            <div class="form__group">
+              <label for="newNameHi">Name (हिंदी)</label>
+              <input id="newNameHi" name="newNameHi" />
+            </div>
+            <div class="form__group">
+              <label for="newNameGu">Name (ગુજરાતી)</label>
+              <input id="newNameGu" name="newNameGu" />
+            </div>
+            <div class="form__group">
+              <label for="newPrice">Price (₹)</label>
+              <input id="newPrice" name="newPrice" type="number" min="1" required />
+            </div>
+            <div class="form__group">
+              <label for="newUnit">Unit</label>
+              <input id="newUnit" name="newUnit" placeholder="250g" />
+            </div>
+            <div class="form__group">
+              <label for="newImage">Image URL</label>
+              <input id="newImage" name="newImage" placeholder="https://..." />
+            </div>
+            <button type="submit" class="btn btn--primary">Add Product</button>
+            <p class="form__note">Changes are saved locally in the server data file.</p>
+          </form>
+        </section>
+      </div>
+
+      <div id="adminToast" class="toast"></div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

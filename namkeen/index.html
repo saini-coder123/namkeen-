@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Brand Name] | Fresh & Crispy Namkeen</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a6b4c5b1cc.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">
+        <img src="https://images.unsplash.com/photo-1611275252364-957a43a76f6d?auto=format&fit=crop&w=120&q=60" alt="Brand Logo" />
+        <div class="brand">
+          <h1>[Your Brand Name]</h1>
+          <p>Ahmedabad, India</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+        <a href="#products" class="nav__link" data-i18n="nav.products">Products</a>
+        <a href="#services" class="nav__link" data-i18n="nav.services">Services</a>
+        <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="mobileNavToggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="btn btn--ghost lang-switcher__toggle" id="langToggle" type="button" aria-label="Change language">
+            <i class="fas fa-language"></i>
+            <span class="lang-switcher__label">EN</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="lang-switcher__menu" id="langMenu" aria-hidden="true">
+            <button class="lang-switcher__option" type="button" data-lang="en">English</button>
+            <button class="lang-switcher__option" type="button" data-lang="hi">हिंदी</button>
+            <button class="lang-switcher__option" type="button" data-lang="gu">ગુજરાતી</button>
+          </div>
+        </div>
+
+        <button class="cart" id="cartButton" aria-label="View cart" type="button">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="cart__count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content fade-in">
+          <h2 class="hero__title"><span data-i18n="hero.title">Fresh &amp; Crispy</span><br /><span class="highlight" data-i18n="hero.highlight">Traditional Namkeen</span></h2>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">Made with love in Ahmedabad. Enjoy handcrafted sev, puri, bhujia, mixtures and more.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" id="orderNow" data-scroll="products" data-i18n="hero.orderNow">Order Now</button>
+            <a class="btn btn--secondary" href="#products" data-i18n="hero.explore">Explore Products</a>
+          </div>
+        </div>
+        <div class="hero__visual fade-in">
+          <img src="https://images.unsplash.com/photo-1588805096936-03d0b0f6b1fd?auto=format&fit=crop&w=800&q=70" alt="Namkeen bowl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h3 data-i18n="about.title">About Us</h3>
+          <p data-i18n="about.description">At [Your Brand Name], we bring you the authentic taste of Gujarati snacks made with premium ingredients and traditional recipes. Our snacks are crunchy, flavorful, and perfect for every occasion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section section--alt" id="products">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h3 data-i18n="products.title">Our Products</h3>
+          <p data-i18n="products.subtitle">Pick your favourites. We pack snacks fresh every day.</p>
+        </div>
+
+        <div class="grid grid--4col fade-in" id="productGrid">
+          <!-- Product cards will render here via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h3 data-i18n="services.title">Services</h3>
+          <p data-i18n="services.subtitle">Everything you need for home snacking and business servings.</p>
+        </div>
+
+        <div class="grid grid--3col fade-in">
+          <div class="feature">
+            <i class="fas fa-boxes feature__icon"></i>
+            <h4 data-i18n="services.bulk.title">Bulk Orders</h4>
+            <p data-i18n="services.bulk.description">Planning a party or event? Order in bulk with special pricing.</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-truck feature__icon"></i>
+            <h4 data-i18n="services.wholesale.title">Wholesale Supply</h4>
+            <p data-i18n="services.wholesale.description">Retailers and kirana stores welcome. Reliable supply, always fresh.</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-gift feature__icon"></i>
+            <h4 data-i18n="services.packaging.title">Custom Packaging</h4>
+            <p data-i18n="services.packaging.description">Gift packs, branded packets or party favors—made just the way you want.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h3 data-i18n="gallery.title">Gallery</h3>
+          <p data-i18n="gallery.subtitle">Snacks that look as good as they taste.</p>
+        </div>
+        <div class="grid grid--gallery fade-in">
+          <div class="gallery__item" style="background-image: url('https://images.unsplash.com/photo-1570197780439-a7e6d3b0cd92?auto=format&fit=crop&w=900&q=70');"></div>
+          <div class="gallery__item" style="background-image: url('https://images.unsplash.com/photo-1545034583-44041fb688a5?auto=format&fit=crop&w=900&q=70');"></div>
+          <div class="gallery__item" style="background-image: url('https://images.unsplash.com/photo-1555679421-703b2b21b0fb?auto=format&fit=crop&w=900&q=70');"></div>
+          <div class="gallery__item" style="background-image: url('https://images.unsplash.com/photo-1575338459959-18e14c422c72?auto=format&fit=crop&w=900&q=70');"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h3 data-i18n="testimonials.title">Testimonials</h3>
+          <p data-i18n="testimonials.subtitle">What our happy customers say.</p>
+        </div>
+
+        <div class="grid grid--testimonials fade-in">
+          <div class="testimonial">
+            <p data-i18n="testimonials.review1">“The best namkeen in Ahmedabad! The crunch is unmatched and the flavours are spot on. Always a pleasure to order.”</p>
+            <div class="testimonial__author">
+              <span class="author__name">Riya Patel</span>
+              <span class="author__meta" data-i18n="testimonials.review1Meta">Home Baker</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <p data-i18n="testimonials.review2">“We stock these snacks in our store and they sell out every week. Customers love the freshness and packaging.”</p>
+            <div class="testimonial__author">
+              <span class="author__name">Amit Mehta</span>
+              <span class="author__meta" data-i18n="testimonials.review2Meta">Shop Owner</span>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <p data-i18n="testimonials.review3">“Great service and the bulk order arrived right on time. Packaging was neat and everything tasted delicious.”</p>
+            <div class="testimonial__author">
+              <span class="author__name">Neha Joshi</span>
+              <span class="author__meta" data-i18n="testimonials.review3Meta">Event Planner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h3 data-i18n="contact.title">Contact</h3>
+          <p data-i18n="contact.subtitle">Ready to place an order or have a question? Reach out and we’ll get back quickly.</p>
+        </div>
+
+        <div class="contact__grid fade-in">
+          <div class="contact__info">
+            <div class="contact__card">
+              <i class="fas fa-phone-alt"></i>
+              <h4 data-i18n="contact.phoneTitle">Phone</h4>
+              <p data-i18n="contact.phone">+91 98765 43210</p>
+            </div>
+            <div class="contact__card">
+              <i class="fab fa-whatsapp"></i>
+              <h4 data-i18n="contact.whatsappTitle">WhatsApp</h4>
+              <p>
+                <a class="whatsapp" href="https://wa.me/919876543210?text=Hello%20%5BYour%20Brand%20Name%5D%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" data-i18n="contact.whatsappLink">Chat on WhatsApp</a>
+              </p>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form__group">
+              <label for="name" data-i18n="contact.form.nameLabel">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" data-i18n-placeholder="contact.form.namePlaceholder" required />
+              <span class="form__error" id="nameError"></span>
+            </div>
+            <div class="form__group">
+              <label for="email" data-i18n="contact.form.emailLabel">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" data-i18n-placeholder="contact.form.emailPlaceholder" required />
+              <span class="form__error" id="emailError"></span>
+            </div>
+            <div class="form__group">
+              <label for="message" data-i18n="contact.form.messageLabel">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like..." data-i18n-placeholder="contact.form.messagePlaceholder" required></textarea>
+              <span class="form__error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" data-i18n="contact.form.send">Send Message</button>
+            <p class="form__note" data-i18n="contact.form.note">We respond within 24 hours. Your info stays private.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cartSidebar" aria-hidden="true">
+    <div class="cart-sidebar__header">
+      <h3 data-i18n="cart.title">Your Cart</h3>
+      <button class="btn btn--ghost" id="closeCart" aria-label="Close cart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-sidebar__content">
+      <div class="cart-sidebar__items" id="cartItems">
+        <p class="cart-sidebar__empty" data-i18n="cart.empty">Your cart is empty. Add some snacks!</p>
+      </div>
+      <div class="cart-sidebar__totals">
+        <div class="cart-sidebar__line">
+          <span data-i18n="cart.subtotal">Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <button class="btn btn--primary btn--block" id="checkoutButton" disabled data-i18n="cart.checkout">Proceed to Checkout</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-sidebar__backdrop" id="cartBackdrop"></div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close btn btn--ghost" id="checkoutClose" aria-label="Close checkout"><i class="fas fa-times"></i></button>
+      <h3 data-i18n="checkout.title">Checkout</h3>
+      <p data-i18n="checkout.subtitle">Review your order and fill in delivery details.</p>
+      <div class="modal__body">
+        <div class="order-summary" id="orderSummary">
+          <!-- Filled by JS -->
+        </div>
+
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <div class="form__group">
+            <label for="orderName" data-i18n="checkout.nameLabel">Name</label>
+            <input id="orderName" name="orderName" type="text" placeholder="Your name" required />
+            <span class="form__error" id="orderNameError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="orderPhone" data-i18n="checkout.phoneLabel">Phone</label>
+            <input id="orderPhone" name="orderPhone" type="tel" placeholder="+91 98765 43210" required />
+            <span class="form__error" id="orderPhoneError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="orderEmail" data-i18n="checkout.emailLabel">Email</label>
+            <input id="orderEmail" name="orderEmail" type="email" placeholder="you@example.com" required />
+            <span class="form__error" id="orderEmailError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="orderAddress" data-i18n="checkout.addressLabel">Delivery address</label>
+            <textarea id="orderAddress" name="orderAddress" rows="3" placeholder="Street, city, pin code" required></textarea>
+            <span class="form__error" id="orderAddressError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="orderNotes" data-i18n="checkout.notesLabel">Notes (optional)</label>
+            <textarea id="orderNotes" name="orderNotes" rows="2" placeholder="Any preferences?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block" data-i18n="checkout.placeOrder">Place Order</button>
+          <p class="form__note" data-i18n="checkout.note">We&#39;ll contact you to confirm and schedule delivery.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/919876543210?text=Hi%20there%2C%20I%20want%20to%20order%20some%20snacks." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span data-i18n="whatsapp.button">Order Now</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <h4 data-i18n="footer.brand">[Your Brand Name]</h4>
+        <p data-i18n="footer.tagline">Authentic Namkeen from Ahmedabad.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#products" data-i18n="nav.products">Products</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="admin.html" target="_blank">Admin</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <p class="footer__copy" data-i18n="footer.copy">&copy; <span id="year"></span> [Your Brand Name]. All rights reserved.</p>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
